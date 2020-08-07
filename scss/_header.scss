@@ -1,0 +1,92 @@
+// Header
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 34px 0;
+    position: relative;
+    h1 {
+        width: 25%;
+    }
+    @include pad(){
+        justify-content: space-around;
+    }
+}
+.navbar-toggler {
+    display: none;
+    border: none;
+    background: transparent; /* 背景透明 */
+    cursor: pointer;
+    border-radius: 5px;
+    @include pad(){
+        display: block;
+    }
+}
+@include pad(){
+    .navbar-toggler:focus {
+        outline: 0;
+    }
+}
+.LOGO {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg);
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-size: contain;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include pad(){
+        background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logotype-lg-dark.svg);
+    }
+}
+.menu {
+    display: flex;
+    align-items: center;
+    max-height: 0px;
+    @include pad(){
+        position: absolute;
+        left: 0;     /* 使用相對定位, */
+        top: 100%;   /* 使選單放置在上排header下方 */ 
+        width: 100%;
+        transition: all 0.8s;
+        overflow: hidden;  /* 自動隱藏超出的文字或圖片 */
+        background: white;
+        flex-direction: column;
+    }
+    &-link{
+        display: block;
+        color: $green-dark;
+        font-weight: bolder;
+        padding: 5px 30px;
+        border-radius: 5px;
+        @include pad(){
+            padding: 10px 0;    /* 菜單連結寬度自適應li */
+            text-align: center;
+        }
+    }
+    &-item{
+        @include pad(){
+            width: 100%;
+        }
+    }
+}
+/* 點擊時, 最大高度設成200px */
+.header .active{
+    max-height: 200px;
+}
+.navbar-menu{
+    display: flex;
+    align-items: center;
+}
+.menu-link:hover, .shopping-cart:hover, .navbar-toggler:hover{
+    background-color: $green-light;
+}
+.shopping-cart {
+    margin-left: 25px;
+    padding: 5px;
+    border-radius: 5px;
+    @include pad(){
+        margin: 0;
+    }
+}

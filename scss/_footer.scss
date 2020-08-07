@@ -1,0 +1,120 @@
+// Footer
+.footer {
+    background-color: $green-light;
+    padding: 30px 0px;
+    &-form{
+        background-color: $green-dark;
+        padding: 30px;
+    }
+    &-inner{
+        @include pad(){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+    }
+    &-innerTop{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+    &-innerBottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        @include pad(){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}
+.container-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include pc-pad(){
+        flex-direction: column;
+    }
+}
+.label-form {
+    display: flex;
+    align-items: center;
+    img{
+        height: 40px;
+        margin-right: 20px;
+    }
+    span{
+        display: block;
+        font-size: $font-m;
+        font-weight: bold;
+        color: $green-light;
+    }
+    @include pc-pad(){
+        margin-bottom: 10px;
+    }
+}
+.form-input {
+    display: flex;
+    position: relative;
+    input{
+        display: block;
+        width: 100%;
+        padding-left: 65px;
+        font-weight: bold;
+        color: $green-dark;
+        outline: none;
+        border: none;
+    }
+    button{
+        cursor: pointer;
+        background-color: #FFE180;
+        padding: 16px;
+        outline: none;
+        border: none;
+    }
+}
+.mailIcon {
+    position: absolute;
+    left: 16px;
+    top: 15px;
+}
+.contact-method {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    img{
+        @include pad(){
+            margin-bottom: 40px;
+        }
+    }
+}
+.c-list {
+    line-height: 1.5;
+    color: $green-dark;
+}
+.slogan {
+    writing-mode: vertical-rl;
+    font-size: $font-l;
+    line-height: 1.5;
+    letter-spacing: 5px;
+    font-weight: bold;
+    color: $green-dark;
+    @include pad(){
+        display: none;
+    }
+}
+.c-link {
+    display: flex;
+    a{
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+    }
+    @include pad(){
+        margin-bottom: 23px;
+    }
+}
+.rights {
+    font-size: $font-s;
+    color: $green-dark;
+}

@@ -1,0 +1,159 @@
+// Banner
+.banner{
+    margin-bottom: 60px;
+    @include pc-pad(){
+        margin-bottom: 0;
+    }
+}
+
+// Content
+.content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/* List */
+.list{
+    width: 33%;
+    text-align: center;
+    font-size: $font-l;
+    line-height: 1.5;
+    font-weight: bolder;
+    h2{
+        background: $green-dark;
+        color: #fff;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    li{
+        border: 1px solid $green-light;
+        a{
+            color: $green-dark;
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+        a:hover{
+            background-color: $green-light;
+        }
+    }
+    @include pc-pad(){
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+/* Card */
+.card{
+    width: 66%;
+    @include pc-pad(){
+        width: 100%;
+    }
+    &-list{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: center;
+        @include pc-pad(){
+            justify-content: space-around;   
+        }
+    }
+}
+.item{
+    margin-bottom: 20px;
+    &-header{
+        position: relative;
+    }
+}
+.tag{
+    position: absolute;
+    background-color: $green-dark;
+    writing-mode: vertical-lr;
+    padding: 10px;
+    color: $green-light;
+    font-size: 16px;
+    font-weight: bolder;
+    letter-spacing: 4px;
+    left: 20px;
+    top: 0;
+}
+.like{
+    display: block;
+    position: absolute;
+    top: 19px;
+    right: 22px;
+    padding: 5px;
+}
+.item-info{
+    display: flex;
+    border-left: 1px solid $green-light;
+    border-right: 1px solid $green-light;
+    border-bottom: 1px solid $green-light;
+    align-items: center;
+    font-size: $font-m;
+}
+.name{
+    color: $green-dark;
+    font-weight: lighter;
+    text-align: center;
+    padding: 14px 0;
+    flex: 1px;
+}
+.price{
+    display: block;
+    text-align: center;
+    line-height: 1.75;
+    font-weight: bolder;
+    color: $green-dark;
+    padding: 14px 20px;
+    border-left: 1px solid $green-light;
+}
+.addToShopCart{
+    text-align: center;
+    background: $green-light;
+    color: $green-dark;
+    font-size: $font-l;
+    line-height: 1.5;
+    font-weight: bolder;
+    border: 1px solid $green-light;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    &:hover{
+        background-color: $green-dark;
+        color: $green-light;
+    }
+}
+
+// Page
+.page-btns{
+    padding-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 60px;
+    @include pc-pad(){
+        justify-content: center;   
+    }
+}
+.page-btn{
+    border: 1px solid $green-light;
+    text-align: center;
+    a{
+        padding: 21px;
+        color: $green-dark;
+    }
+    a:hover{
+        background-color: $green-dark;
+        color: $green-light;
+    }
+}
+.arrow{
+    &:hover{
+        border-color: $green-dark;
+    }
+    a{
+        padding: 17px;
+        &:hover{
+            background-color: #FFF;
+        }
+    }
+}

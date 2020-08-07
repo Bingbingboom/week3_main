@@ -1,0 +1,28 @@
+// 全域CSS 
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+    // 蘋果系統字 預設英文 預設中文
+}
+
+.container{
+    max-width: 940px;
+    margin: 0 auto;
+    @include pc-pad(){
+        max-width: 767px;
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+}
