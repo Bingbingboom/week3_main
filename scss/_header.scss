@@ -47,7 +47,7 @@
     @include pad(){
         position: absolute;
         left: 0;     /* 使用相對定位, */
-        top: 100%;   /* 使選單放置在上排header下方 */ 
+        top: 99%;   /* 使選單放置在上排header下方 */ 
         width: 100%;
         transition: all 0.8s;
         overflow: hidden;  /* 自動隱藏超出的文字或圖片 */
